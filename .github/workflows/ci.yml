@@ -21,4 +21,5 @@ jobs:
       with:
         distribution: 'temurin'
         java-version: ${{ matrix.java-version }}
+    - run: gradle build
     - run: gradle -PTestLoggingFull=true check_translation check
